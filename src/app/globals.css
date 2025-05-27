@@ -1,31 +1,22 @@
-/* 1. Tailwind’s preflight (reset styles) */
 @import "tailwindcss/preflight";
-
-/* 2. Tailwind’s utilities (core class system) */
 @import "tailwindcss/utilities";
 
-/* 3. CSS Variables for light/dark theming */
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --font-sans: 'Inter', Arial, Helvetica, sans-serif;
+  --font-sans: 'Inter', sans-serif;
 }
-
-.dark {
-  --background: #0a0a0a;
+.dark { 
+  --background: #0a0a0a; 
   --foreground: #ededed;
 }
 
-/* 4. Global body styles */
 body {
-  background-color: var(--background);
+  background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
 }
 
-/* 5. Ensure Tailwind dark mode works with .dark class */
 @layer base {
-  html.dark {
-    color-scheme: dark;
-  }
+  html.dark { color-scheme: dark; }
 }
