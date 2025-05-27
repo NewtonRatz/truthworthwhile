@@ -1,4 +1,5 @@
 // src/app/page.tsx
+
 import React from "react";
 import NewsCard from "@/components/NewsCard";
 
