@@ -1,15 +1,14 @@
-/* src/app/globals.css */
-
-/* 1. Tailwind’s preflight (formerly “base”) resets */
+/* 1. Tailwind’s preflight (reset styles) */
 @import "tailwindcss/preflight";
 
-/* 2. Tailwind’s utility classes */
+/* 2. Tailwind’s utilities (core class system) */
 @import "tailwindcss/utilities";
 
 /* 3. CSS Variables for light/dark theming */
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-sans: 'Inter', Arial, Helvetica, sans-serif;
 }
 
 .dark {
@@ -17,14 +16,14 @@
   --foreground: #ededed;
 }
 
-/* 4. Apply the variables globally */
+/* 4. Global body styles */
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
 }
 
-/* 5. Ensure dark-mode media query falls back to .dark class if you enable it via Tailwind */
+/* 5. Ensure Tailwind dark mode works with .dark class */
 @layer base {
   html.dark {
     color-scheme: dark;
